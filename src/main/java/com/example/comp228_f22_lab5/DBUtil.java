@@ -4,6 +4,7 @@ import java.sql.*;
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetFactory;
 import javax.sql.rowset.RowSetProvider;
+import java.util.*;
 
 
 public class DBUtil {
@@ -63,11 +64,18 @@ public class DBUtil {
         }
     }
 
-    public static void insertData(String tableName, int id, String name) throws SQLException {
+    public static void insertDataGame(String tableName, int id, String name) throws SQLException {
         dbConnect();
         String sql = "INSERT INTO " + tableName + " VALUES(" + id + ",'" + name + "')";
         statement.executeUpdate(sql);
         System.out.println(id + ", " + name + " is inserted");
+    }
+
+    public static void insertDataPlayer(String tableName, int id, String first_name, String last_name, String address, String postal_code, String Province, String phone_number ) throws SQLException {
+        dbConnect();
+        String sql = "INSERT INTO " + tableName + " VALUES(" + id + ", '" + first_name + "', '" + last_name +  "', '" + address + "', '" + postal_code  + "', '" + Province + "', '" + phone_number + "')";
+        statement.executeUpdate(sql);
+        System.out.println(id + ", " + first_name + ", " +  last_name + ", " + address + ", "+ postal_code + ", " + Province + ", " + phone_number + " is inserted");
     }
 
     public static ResultSet query(String sql) throws SQLException {
