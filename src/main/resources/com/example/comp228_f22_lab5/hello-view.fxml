@@ -3,11 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="qqqqqqqqq" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp228_f22_lab5.GameAndPlayerController">
+<Pane fx:id="qqqqqqqqq" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp228_f22_lab5.GameAndPlayerController">
    <children>
       <TextField fx:id="lastNameTextField" layoutX="529.0" layoutY="119.0" />
       <Label layoutX="286.0" layoutY="31.0" text="Games played this semester" />
@@ -44,5 +46,15 @@
       <TextField fx:id="scoreTextField" layoutX="102.0" layoutY="297.0" />
       <Button layoutX="547.0" layoutY="274.0" mnemonicParsing="false" onAction="#onButtonPlayerClick" text="Add Player Details" />
       <Button fx:id="playerGameDetails" layoutX="120.0" layoutY="328.0" mnemonicParsing="false" onAction="#onButtonPlayerGameClick" text="Add Player Details" />
+      <TableView layoutX="93.0" layoutY="383.0" prefHeight="200.0" prefWidth="706.0">
+        <columns>
+          <TableColumn fx:id="game_id" prefWidth="75.0" text="Game ID" />
+          <TableColumn fx:id="game_title" prefWidth="75.0" text="Game Title" />
+            <TableColumn fx:id="player_id" prefWidth="75.0" text="Player ID" />
+            <TableColumn fx:id="player_game_id" prefWidth="96.0" text="Player Game ID" />
+            <TableColumn fx:id="playing_date" prefWidth="75.0" text="Playing Date" />
+            <TableColumn fx:id="score" prefWidth="75.0" text="Score" />
+        </columns>
+      </TableView>
    </children>
 </Pane>
