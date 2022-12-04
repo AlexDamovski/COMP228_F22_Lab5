@@ -92,9 +92,12 @@ public class DBUtil {
         resultSet = statement.executeQuery(sql);
         crs.populate(resultSet);
         while (resultSet.next()) {
-            int id = resultSet.getInt("s_id");
-            String name = resultSet.getString("s_name");
-            System.out.println(id + " , " + name);
+            int player_game_id = resultSet.getInt("player_game_id");
+            int game_id = resultSet.getInt("game_id");
+            int player_id = resultSet.getInt("player_id");
+            String playing_date = resultSet.getString("playing_date");
+            int score = resultSet.getInt("score");
+            System.out.println(game_id + " " + player_id + " " + player_game_id + " " + playing_date + " " + score);
         }
         if (statement != null) {
             statement.close();

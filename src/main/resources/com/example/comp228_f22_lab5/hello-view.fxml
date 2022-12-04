@@ -46,15 +46,16 @@
       <TextField fx:id="scoreTextField" layoutX="102.0" layoutY="297.0" />
       <Button layoutX="547.0" layoutY="274.0" mnemonicParsing="false" onAction="#onButtonPlayerClick" text="Add Player Details" />
       <Button fx:id="playerGameDetails" layoutX="120.0" layoutY="328.0" mnemonicParsing="false" onAction="#onButtonPlayerGameClick" text="Add Player Details" />
-      <TableView layoutX="93.0" layoutY="383.0" prefHeight="200.0" prefWidth="706.0">
-        <columns>
-          <TableColumn fx:id="game_id" prefWidth="75.0" text="Game ID" />
-          <TableColumn fx:id="game_title" prefWidth="75.0" text="Game Title" />
-            <TableColumn fx:id="player_id" prefWidth="75.0" text="Player ID" />
-            <TableColumn fx:id="player_game_id" prefWidth="96.0" text="Player Game ID" />
-            <TableColumn fx:id="playing_date" prefWidth="75.0" text="Playing Date" />
-            <TableColumn fx:id="score" prefWidth="75.0" text="Score" />
-        </columns>
+      <Button fx:id="searchButton" layoutX="420.0" layoutY="638.0" mnemonicParsing="false" onAction="#onButtonSearchClick" text="Search Database" />
+      <TableView fx:id="table" layoutX="95.0" layoutY="376.0" prefHeight="200.0" prefWidth="771.0">
+         <columns>
+            <TableColumn fx:id="PlayerGameID" prefWidth="75.0" text="PlayerGame" />
+            <TableColumn fx:id="game_id" prefWidth="75.0" text="Gameid" />
+            <TableColumn fx:id="player_id" prefWidth="75.0" text="Playerid" />
+            <TableColumn fx:id="playing_date" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="player_score" prefWidth="75.0" text="Score" />
+         </columns>
       </TableView>
+      <Button fx:id="deleteButton" layoutX="446.0" layoutY="601.0" mnemonicParsing="false" onAction="#onButtonDeleteClick" text="Delete" />
    </children>
 </Pane>
