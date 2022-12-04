@@ -72,8 +72,8 @@ public class GameAndPlayerController {
     }
 
     @FXML
-    void onButtonPlayerGameClick(ActionEvent event) {
-
+    void onButtonPlayerGameClick(ActionEvent event) throws SQLException {
+        DBUtil.insertDataPlayerGame("PLAYERANDGAME", parseInt(playGameIdTextField.getText()), parseInt(gameIdTextField.getText()), parseInt(playerIdDetailsTextField.getText()), String.valueOf(playerDate.getValue()), parseInt(scoreTextField.getText()));
     }
 
 }

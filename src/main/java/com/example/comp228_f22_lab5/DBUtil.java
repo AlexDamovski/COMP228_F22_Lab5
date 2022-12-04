@@ -78,6 +78,13 @@ public class DBUtil {
         System.out.println(id + ", " + first_name + ", " +  last_name + ", " + address + ", "+ postal_code + ", " + Province + ", " + phone_number + " is inserted");
     }
 
+    public static void insertDataPlayerGame(String tableName, int playerGameId, int gameId, int playerId, String playingDate, int score) throws SQLException {
+        dbConnect();
+        String sql = "INSERT INTO " + tableName + " VALUES(" + playerGameId + ", '" + gameId + "', '" + playerId +  "', '" + playingDate + "', '" + score  + "')";
+        statement.executeUpdate(sql);
+        System.out.println(playerGameId + ", " + gameId + ", " +  playerId + ", " + playingDate + ", "+ score + " is inserted");
+    }
+
     public static ResultSet query(String sql) throws SQLException {
         CachedRowSet crs = RowSetProvider.newFactory().createCachedRowSet();
         dbConnect();
